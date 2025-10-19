@@ -2,18 +2,19 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     buildToolsVersion '28.0.3'
+    namespace "ohi.andre.consolelauncher"
     dexOptions {
     }
 
     defaultConfig {
-        applicationId "ohi.andre.consolelauncher"
+        applicationId "org.asafonov.launcher"
 
         minSdkVersion 14
         targetSdkVersion 27
         flavorDimensions "default"
 
-        versionName "v6.15"
-        versionCode 205
+        versionName "0.1"
+        versionCode 1
     }
     buildTypes {
         release {

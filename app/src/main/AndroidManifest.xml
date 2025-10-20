@@ -30,6 +30,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK"  />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <permission
         android:name="android.permission.FLASHLIGHT"
@@ -99,6 +101,7 @@
             android:resumeWhilePausing="true"
             android:stateNotNeeded="true"
             android:taskAffinity=""
+            android:exported="true"
             android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -113,6 +116,7 @@
         <receiver
             android:name=".tuils.stuff.PolicyReceiver"
             android:description="@string/admin_permission"
+            android:exported="true"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
@@ -139,6 +143,7 @@
             android:label="@string/tuixt_label"
             android:noHistory="true"
             android:theme="@style/Custom.Solid"
+            android:exported="true"
             android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -218,6 +223,7 @@
         <service
             android:name=".managers.notifications.NotificationService"
             android:label="@string/notification_reader"
+            android:exported="true"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
@@ -227,6 +233,7 @@
 
         <activity
             android:name=".tuils.stuff.FakeLauncherActivity"
+            android:exported="true"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -13,8 +13,8 @@ android {
         targetSdkVersion 27
         flavorDimensions "default"
 
-        versionName "0.1"
-        versionCode 1
+        versionName "0.2"
+        versionCode 2
     }
     buildTypes {
         release {

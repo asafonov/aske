@@ -10,9 +10,9 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
-import android.support.v4.app.RemoteInput;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.app.RemoteInput;
 import android.text.SpannableString;
 import android.text.TextUtils;
 
@@ -155,7 +155,7 @@ public class KeeperService extends Service {
                     c,
                     0,
                     startMain,
-                    PendingIntent.FLAG_CANCEL_CURRENT
+                    PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE
             );
         } else if(clickCmd != null && clickCmd.length() > 0) {
             Intent cmdIntent = new Intent(PublicIOReceiver.ACTION_CMD);
@@ -165,7 +165,7 @@ public class KeeperService extends Service {
                     c,
                     0,
                     cmdIntent,
-                    0
+                    0 | PendingIntent.FLAG_IMMUTABLE
             );
         } else {
             pendingIntent = null;

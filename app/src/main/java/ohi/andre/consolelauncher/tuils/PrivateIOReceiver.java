@@ -9,11 +9,10 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.app.RemoteInput;
-import android.support.v4.content.LocalBroadcastManager;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
-
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.core.app.RemoteInput;
 import ohi.andre.consolelauncher.BuildConfig;
 import ohi.andre.consolelauncher.MainManager;
 import ohi.andre.consolelauncher.managers.TerminalManager;

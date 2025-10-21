@@ -135,7 +135,7 @@
         <service
             android:name=".managers.music.MusicService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity
             android:name=".commands.tuixt.TuixtActivity"
@@ -229,7 +229,7 @@
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
-        <service android:name=".managers.notifications.NotificationMonitorService" />
+        <service android:name=".managers.notifications.NotificationMonitorService" android:exported="false" />
 
         <activity
             android:name=".tuils.stuff.FakeLauncherActivity"

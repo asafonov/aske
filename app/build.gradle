@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 33
+    compileSdkVersion 36
     namespace "ohi.andre.consolelauncher"
     dexOptions {
     }
@@ -9,12 +9,17 @@ android {
         applicationId "org.asafonov.launcher"
 
         minSdkVersion 21
-        targetSdkVersion 35
+        targetSdkVersion 36
         flavorDimensions "default"
 
         versionName "0.3"
         versionCode 3
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -23,11 +28,12 @@ android {
             zipAlignEnabled true
         }
     }
-    dependencies {
-        implementation 'com.android.support:appcompat-v7:27.1.1'
-    }
 }
 dependencies {
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
+    implementation "androidx.annotation:annotation:1.7.1"
+    implementation "androidx.appcompat:appcompat:1.7.0"
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'net.sourceforge.htmlcleaner:htmlcleaner:2.6'
     implementation 'com.jayway.jsonpath:json-path:2.4.0'
